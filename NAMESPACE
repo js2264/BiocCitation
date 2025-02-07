@@ -2,3 +2,4 @@
 
 export(updateCitation)
 importFrom(rcrossref,cr_cn)
+importFrom(stringr,str_glue)

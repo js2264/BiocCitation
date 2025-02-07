@@ -23,7 +23,12 @@ updateCitation <- function(doi, output_file = "inst/CITATION") {
     
     # Check that output folder exists
     if (!dir.exists(dirname(output_file))) {
-        stop(dirname(output_file), " directory does not exist.")
+        response <- readline(prompt = paste(dirname(output_file), "directory does not exist. Do you want to create it? (y/n): "))
+        if (tolower(response) == "y") {
+            dir.create(dirname(output_file), recursive = TRUE)
+        } else {
+            stop("Operation cancelled by the user.")
+        }
     }
     # Ask if it's ok to replace current CITATION
     if (file.exists(output_file)) {

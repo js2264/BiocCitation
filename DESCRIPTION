@@ -10,11 +10,13 @@ Description: This package creates a CITATION file from a unique DOI.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Depends:
-    R (>= 4.4), 
-    rcrossref
+    R (>= 4.4)
 Imports: 
+    rcrossref,
+    devtools, 
+    S4Vectors, 
     stringr
 biocViews:
     Software, 

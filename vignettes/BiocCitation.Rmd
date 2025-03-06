@@ -9,12 +9,16 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
+    collapse = TRUE,
+    comment = "#>"
 )
 ```
 
 ```{r}
 library(BiocCitation)
-updateCitation('10.1038/nmeth.3252')
+use_citation(doi = '10.1038/nmeth.3252', output = "CITATION")
+use_citation(
+    doi = c("10.1186/s12859-016-1323-z", "10.1093/bioinformatics/btaa687"), 
+    output = "CITATION2"  
+)
 ```
